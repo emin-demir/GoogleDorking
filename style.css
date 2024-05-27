@@ -1,0 +1,137 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
+}
+
+.domain{
+    display: flex;
+    padding: 0 30px;
+}
+#domain-list{
+    background-color: #0f0f0f;
+    color: #00ff00;
+}
+.search{
+    display: flex;
+    padding: 0 30px;
+}
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    color: #00ff00;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    background-color: #ff00ff;
+    color: #0f0f0f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff0099;
+}
+
+#results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.result-panel {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    box-sizing: border-box;
+    position: relative; /* İçeriklerin konumlarını ayarlamak için relative kullanıyoruz */
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    transition: transform 0.3s ease;
+}
+
+.result-panel:hover {
+    transform: scale(1.05);
+}
+
+.search-key {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
+}
+
+.description {
+    margin-top: 40px; /* search-key için yeterli boşluk bırakıyoruz */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    color: #00FFFF;
+    position: relative;
+    z-index: 1; /* description üzerinde geldiğimizde search-key'i göstermesi için */
+}
+
+.result-panel:hover .search-key {
+    clip-path: inset(0 0 0 0); /* Hover ile tamamen görünür yapmak için */
+}
+.site{
+    display: block;
+}
+.sites-list {
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.sites-list a {
+    padding: 5px;
+    margin: 0;
+    background-color: #0f0f0f;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #00ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s ease;
+}
+
+.sites-list a:hover {
+    background-color: #FF0000 ;
+}

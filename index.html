@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dorking Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="domain">
+            <textarea id="domain-list" rows="4" cols="50" placeholder="example.com"></textarea>
+            <button style="Display:none;" onclick="loadDomains()">Domain List</button>
+            <button onclick="loadDomainsArea()">Domain List Area</button>
+        </div>
+        <div class="search">
+            <input type="text" id="search-input" placeholder="Arama Anahtarı">
+            <button onclick="displayResults()">Ara</button>
+        </div>
+    </div>
+    <div id="results-container"></div>
+    
+        <!-- Sonuçlar buraya eklenecek -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
